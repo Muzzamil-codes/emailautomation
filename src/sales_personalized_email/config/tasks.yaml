@@ -1,0 +1,31 @@
+research_sme_task:
+  description: >
+    Conduct thorough research on {company} as a business in the {industry} industry located in {location}.
+    Look for information specific to this business in the same industry and local market,
+    and specific pain points that we can use to advertise our web desiging services.
+    Gather insights about what benefit we can provide to a business like that by building a website for them.
+    Try using google reviews to get any negative comment that we can use to stage our solution.
+  expected_output: >
+    A detailed profile of {company} and its industry context, including:
+    1  One great achivement accomplished by {company} in the {industry} sector to be able to compliment them
+    2. Specific challenges faced by {company} in the {industry} sector
+    3. Industry trends that might impact this business
+    4. Typical business needs and pain points for SMEs in this market
+    5. Potential growth opportunities relevant to this type of business witht he help of {product}
+
+
+write_sme_email_task:
+  description: >
+    Craft a business-focused email to the {company}'s official mail about how they need a {our_product}.
+    Create an email that aims to produce a solution to their business type, industry challenges, 
+    and how your solution addresses specific business needs. The email should start by something like,
+    I was looking for {industry} and found your company, (Give a subtle compliment) and mention how we
+    can improve their website, (mention 1 or 2 pain points of their business that we can potentially assist with by our services within a sentence making it as short as possible
+    with a strong and alarming tone creating a feel of FOMO)
+    Talk about how we can join in a call and show how we can fix the problems and create an offer for a free demo website. Put a subject line like 'Quick Question'
+    The tone should be casual and cold while maintaing the professional look with a short and crisp email that
+    doesn't want to waste time. Our Company name is 'SimplyDebug' so add that in end without adding [Your Name] only company name is enough.
+  expected_output: >
+    A Personalized Email object containing:
+    1. A business-focused subject line that addresses a specific business problem
+    2. The body of the email, written in a professional, Don't-wanna-miss-out tone with cold approach
