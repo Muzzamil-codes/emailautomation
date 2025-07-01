@@ -1,61 +1,49 @@
-# SalesPersonalizedEmail Crew
+# 📬 Discord Email Automation Bot (CrewAI-Powered)
 
-Welcome to the SalesPersonalizedEmail Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+A Discord bot to manage cold leads, personalize outreach, and run email automation with multi-agent AI — all through simple commands.
 
-## Installation
+## ⚙️ Features
 
-Ensure you have Python >=3.10 <=3.13 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+- Add/manage leads from Discord
+- Store each lead as a JSON file
+- Stage/unstage/commit files (Git-style)
+- Run email campaigns via CrewAI agents
+- Background processing with live Discord updates
 
-First, if you haven't already, install uv:
+## 🚀 Setup
+
+1. **Clone & Install:**
 
 ```bash
+git clone https://github.com/yourusername/discord-email-bot.git
+cd discord-email-bot
 pip install uv
+uv lock && uv sync
 ```
 
-Next, navigate to your project directory and install the dependencies:
+2. **Create a .env:**
 
-1. First lock the dependencies and then install them:
+```env
+DISCORD_BOT_TOKEN=your_discord_token
+OPENAI_API_KEY=your_openai_key
+```
+
+## 💬 Key Commands
+
+| Command                          | Description          |
+| -------------------------------- | -------------------- |
+| `DuDe addlead ...`               | Add a new lead       |
+| `DuDe listcoldleads`             | List all lead files  |
+| `DuDe showlead 1`                | View specific lead   |
+| `DuDe add_gmail file.json email` | Add Gmail to a lead  |
+| `DuDe stagefile .`               | Stage all leads      |
+| `DuDe unstagefile .`             | Unstage all leads    |
+| `DuDe commit message="..."`      | Commit staged leads  |
+| `DuDe runemailcrew`              | Run email automation |
+
+## For full commands help
+
 ```bash
-uv lock
+DuDe help_leads
+DuDe help_git
 ```
-```bash
-uv sync
-```
-### Customizing
-
-**Add your `OPENAI_API_KEY` into the `.env` file**
-
-- Modify `src/sales_personalized_email/config/agents.yaml` to define your agents
-- Modify `src/sales_personalized_email/config/tasks.yaml` to define your tasks
-- Modify `src/sales_personalized_email/crew.py` to add your own logic, tools and specific args
-- Modify `src/sales_personalized_email/main.py` to add custom inputs for your agents and tasks
-
-## Running the Project
-
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
-
-```bash
-$ crewai run
-```
-or
-```bash
-uv run sales_personalized_email
-```
-
-This command initializes the sales-personalized-email Crew, assembling the agents and assigning them tasks as defined in your configuration.
-
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
-
-## Understanding Your Crew
-
-The sales-personalized-email Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the SalesPersonalizedEmail Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
